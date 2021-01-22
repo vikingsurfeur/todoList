@@ -1,0 +1,296 @@
+@charset "UTF-8";
+/*
+	Standard CSS Reset
+	This is used to account for differences in browsers.
+	Without a reset stylesheet there could be differences
+	between browsers when loading your html website.
+*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Display inline */
+li {
+  display: inline;
+}
+
+/* Remove text decoration */
+a {
+  text-decoration: none;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.todo-container, form .select::after, header, form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #ff8300;
+  background: -moz-radial-gradient(circle, #ff8300 0%, black 100%);
+  background: -webkit-radial-gradient(circle, #ff8300 0%, black 100%);
+  background: radial-gradient(circle, #ff8300 0%, black 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff8300",endColorstr="#000000",GradientType=1);
+  font-family: "Montserrat", sans-serif;
+  color: #fefefe;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style-type: none;
+  display: inline;
+}
+ul li a {
+  color: #fefefe;
+  text-decoration: none;
+}
+
+header {
+  font-size: 3rem;
+}
+
+header, form {
+  min-height: 20vh;
+}
+
+form input, form button {
+  padding: 0.25em;
+  font-size: 2rem;
+  border: none;
+  background-color: #fefefe;
+}
+form input {
+  border-radius: 2px 0 0 2px;
+}
+form button {
+  color: #ff8300;
+  background-color: #fefefe;
+  cursor: pointer;
+  border-radius: 0 2px 2px 0;
+  transition: all 250ms ease;
+}
+form button:hover {
+  color: #fefefe;
+  background-color: #ff8300;
+}
+form input:focus, form button:focus {
+  outline: none;
+}
+form select {
+  padding: 0.49em;
+  width: 10em;
+  font-size: 1.65rem;
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #121212;
+  cursor: pointer;
+  border-radius: 2px;
+}
+form .select {
+  margin: 1em;
+  position: relative;
+  overflow: hidden;
+}
+form .select::after {
+  content: "▼";
+  width: 2em;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fefefe;
+  color: #ff8300;
+  border-radius: 0 2px 2px 0;
+  pointer-events: none;
+  transition: all 250ms ease;
+}
+form .select:hover::after {
+  background-color: #ff8300;
+  color: #fefefe;
+}
+
+.todo-container .todo-list {
+  min-width: 50em;
+}
+.todo-container .todo-list .todo {
+  margin: 2em;
+  background-color: #fefefe;
+  color: #121212;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 2px;
+  transition: all 500ms ease;
+}
+.todo-container .todo-list .todo .todo-item {
+  margin-left: 0.5em;
+}
+.todo-container .todo-list .todo li {
+  flex-grow: 1;
+}
+.todo-container .todo-list .todo .trash-btn, .todo-container .todo-list .todo .complete-btn {
+  color: #fefefe;
+  padding: 0.75em;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+.todo-container .todo-list .todo .trash-btn {
+  background-color: #e10808;
+  border-radius: 0 2px 2px 0;
+}
+.todo-container .todo-list .todo .complete-btn {
+  background-color: #249e24;
+}
+.todo-container .todo-list .todo .trash-btn:focus, .todo-container .todo-list .todo .complete-btn:focus {
+  outline: none;
+}
+.todo-container .todo-list .todo .fa-trash, .todo-container .todo-list .todo .fa-check {
+  pointer-events: none;
+}
+.todo-container .todo-list .completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.todo-container .todo-list .fall {
+  transform: translateY(8em) rotateZ(20deg);
+  opacity: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

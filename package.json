@@ -1,0 +1,26 @@
+{
+  "name": "code_type",
+  "version": "1.0.0",
+  "description": "Package SASS",
+  "main": "./js/main.js",
+  "scripts": {
+    "sass": "sass --watch ./partials/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vikingsurfeur/code_type.git"
+  },
+  "keywords": [
+    "code",
+    "type"
+  ],
+  "author": "David Bouscarle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vikingsurfeur/code_type/issues"
+  },
+  "homepage": "https://github.com/vikingsurfeur/code_type#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

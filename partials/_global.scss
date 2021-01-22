@@ -1,0 +1,30 @@
+// GLOBAL
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: rgb(255,131,0);
+    background: -moz-radial-gradient(circle, rgba(255,131,0,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(255,131,0,1) 0%, rgba(0,0,0,1) 100%);
+    background: radial-gradient(circle, rgba(255,131,0,1) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff8300",endColorstr="#000000",GradientType=1);
+    font-family: $montserrat;
+    color: $blanc;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    li {
+        list-style-type: none;
+        display: inline;
+        a {
+            color: $blanc;
+            text-decoration: none;
+        }   
+    }  
+}

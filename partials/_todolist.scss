@@ -1,0 +1,121 @@
+header {
+    font-size: 3rem;
+}
+
+header, form {
+    min-height: 20vh;
+    @extend %flex-center;
+}
+
+form {
+    input, button {
+        padding: 0.25em;
+        font-size: 2rem;
+        border: none;
+        background-color: $blanc;
+    }
+    input {
+        border-radius: 2px 0 0 2px;
+    }
+    button {
+        color: rgb(255,131,0);
+        background-color: $blanc;
+        cursor: pointer;
+        border-radius: 0 2px 2px 0;
+        transition: all 250ms ease;
+    }
+    button:hover {
+        color: $blanc;
+        background-color: rgb(255,131,0);
+    }
+    input:focus, button:focus {
+        outline: none;
+    }
+    select {
+        padding: 0.49em;
+        width: 10em;
+        font-size: 1.65rem;
+        appearance: none;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        color: $noir;
+        cursor: pointer;
+        border-radius: 2px;
+    }
+    .select {
+        margin: 1em;
+        position: relative;
+        overflow: hidden;
+    }
+    .select::after {
+        content: "\25BC";
+        width: 2em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        @extend %flex-center;
+        background-color: $blanc;
+        color: rgb(255,131,0);
+        border-radius: 0 2px 2px 0;
+        pointer-events: none;
+        transition: all 250ms ease;
+    }
+    .select:hover::after {
+        background-color: rgb(255,131,0);
+        color: $blanc;
+    }
+}
+
+.todo-container {
+    @extend %flex-center;
+    .todo-list {
+        min-width: 50em;
+        .todo {
+            margin: 2em;
+            background-color: $blanc;
+            color: $noir;
+            font-size: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 2px;
+            transition: all 500ms ease;
+            .todo-item {
+                margin-left: 0.5em;
+            }
+            li {
+                flex-grow: 1;
+            }
+            .trash-btn, .complete-btn {
+                color: $blanc;
+                padding: 0.75em;
+                font-size: 1.5rem;
+                border: none;
+                cursor: pointer;
+            }
+            .trash-btn {
+                background-color: rgb(225, 8, 8);
+                border-radius: 0 2px 2px 0;
+            }
+            .complete-btn {
+                background-color: rgb(36, 158, 36);
+            }
+            .trash-btn:focus , .complete-btn:focus {
+                outline: none;
+            }
+            .fa-trash, .fa-check {
+                pointer-events: none;
+            }
+        }
+        .completed {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+        .fall {
+            transform: translateY(8em) rotateZ(20deg);
+            opacity: 0;
+        }
+    }
+}

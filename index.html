@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- LANGUE -->
+<html lang="en">
+<!-- HEAD -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TITRE -->
+    <title>DAVE'S TODO LIST</title>
+    <!-- SEO -->
+    <meta name="description" content="Find Here my Responsive navBar">
+    <!-- ICONE ONGLET 32x32 -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- TITRE PAGE RESEAUX -->
+    <meta property="og:title" content="titre affiché">
+    <!-- IMAGE PAGE RESEAUX -->
+    <meta property="og:image" content="https://">
+    <!-- PARTAGE TWITTER / GO TO https://webcode.tools/twitter-card-generator -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="titre affiché">
+    <meta name="twitter:image" content="https://">
+    <meta name="twitter:description" content="">
+    <!-- JQUERY V3.5.1 NOT SLIM -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <!-- MY CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+<!-- BODY -->
+<body>
+    <header>
+        <h1>Dave's ToDo List</h1>
+    </header>
+    <form>
+        <input type="text" class="todo-input">
+        <button class="todo-button" type="submit">
+            <i class="fas fa-plus-square"></i>
+        </button>
+        <div class="select">
+            <select name="todos" class="filter-todo">
+                <option value="all">All</option>
+                <option value="completed">Completed</option>
+                <option value="uncompleted">Uncompleted</option>
+            </select>
+        </div>
+    </form>
+    <div class="todo-container">
+        <ul class="todo-list"></ul>
+    </div>
+    <!-- MY JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
