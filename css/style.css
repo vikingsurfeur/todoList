@@ -183,7 +183,7 @@ header {
 }
 
 header, form {
-  min-height: 20vh;
+  min-height: 25vh;
 }
 
 form input, form button {
@@ -193,6 +193,7 @@ form input, form button {
   background-color: #fefefe;
 }
 form input {
+  width: 45vw;
   border-radius: 2px 0 0 2px;
 }
 form button {
@@ -210,9 +211,9 @@ form input:focus, form button:focus {
   outline: none;
 }
 form select {
-  padding: 0.49em;
-  width: 10em;
-  font-size: 1.65rem;
+  padding: 0.88em;
+  width: 25vw;
+  font-size: 1.25rem;
   appearance: none;
   outline: none;
   box-shadow: none;
@@ -245,10 +246,10 @@ form .select:hover::after {
 }
 
 .todo-container .todo-list {
-  min-width: 50em;
+  width: 70vw;
 }
 .todo-container .todo-list .todo {
-  margin: 2em;
+  margin: 1em;
   background-color: #fefefe;
   color: #121212;
   font-size: 1.5rem;

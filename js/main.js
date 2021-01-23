@@ -61,9 +61,8 @@ function deleteCheck(e) {
     if (item.classList[0] === 'complete-btn') {
         const todo = item.parentElement;
         todo.classList.toggle('completed');
-        // PENSER A FAIRE UNE FONCTION POUR RECUPERER LE STATUT COMPLETED
     }
-};
+}
 
 // FILTRED TODOS
 
