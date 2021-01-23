@@ -151,7 +151,6 @@ select {
 
 html {
   font-size: 62.5%;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -165,19 +164,6 @@ body {
   color: #fefefe;
 }
 
-ul {
-  padding: 0;
-  margin: 0;
-}
-ul li {
-  list-style-type: none;
-  display: inline;
-}
-ul li a {
-  color: #fefefe;
-  text-decoration: none;
-}
-
 header {
   font-size: 3rem;
 }
@@ -186,6 +172,9 @@ header, form {
   min-height: 25vh;
 }
 
+form {
+  color: #121212;
+}
 form input, form button {
   padding: 0.25em;
   font-size: 2rem;

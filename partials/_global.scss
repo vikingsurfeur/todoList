@@ -2,7 +2,6 @@
 
 html {
     font-size: 62.5%;
-    scroll-behavior: smooth;
 }
 
 body {
@@ -14,17 +13,4 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ff8300",endColorstr="#000000",GradientType=1);
     font-family: $montserrat;
     color: $blanc;
-}
-
-ul {
-    padding: 0;
-    margin: 0;
-    li {
-        list-style-type: none;
-        display: inline;
-        a {
-            color: $blanc;
-            text-decoration: none;
-        }   
-    }  
 }
